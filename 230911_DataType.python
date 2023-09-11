@@ -1,0 +1,27 @@
+# 숫자 자료형
+print(5)
+print(-10)
+print(3.14)
+print(1000)
+
+print(8+1)
+print(8*2)
+
+print(5*(2+6)) # 괄호 안 먼저 연산
+
+
+# 문자열 자료형
+print('풍선')   # 문자열 출력시 " " or ' '
+print("나비")
+print("butterfly")
+
+print("ㅋㅋㅋㅋ")
+print("ㅋ"*4)   # 문자를 연산해서 출력 가능
+
+
+# boolean 자료형
+print(5>10)     # 거짓이므로 false가 나옴
+print(False)    # 동일함
+
+print(not True) # not을 사용해서 부정할 수 있음
+print(not (5>10))
