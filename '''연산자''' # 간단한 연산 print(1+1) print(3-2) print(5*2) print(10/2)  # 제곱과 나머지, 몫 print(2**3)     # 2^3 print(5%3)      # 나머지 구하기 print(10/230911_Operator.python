@@ -1,0 +1,34 @@
+'''연산자'''
+# 간단한 연산
+print(1+1)
+print(3-2)
+print(5*2)
+print(10/2)
+
+# 제곱과 나머지, 몫
+print(2**3)     # 2^3
+print(5%3)      # 나머지 구하기
+print(10//3)    # 몫 구하기
+
+# 부등호
+print(10 > 3)
+print(4 >= 7)
+
+print(5>4>3)    # True
+print(5>7>3)    # False
+
+# ==
+print(3 == 8)   # '=='는 같은지 여부 확인
+print(3 + 4 == 7)
+
+# !(not)
+print(3 != 4)   # '!'는 not과 같은 의미
+print(not(3!=3))    # 부정 중복 -> 긍정
+
+# &(and)
+print((3 > 0) and (8 < 13))
+print((3 > 0) & (8 < 13))
+
+# |(or)
+print((8 > 3) or (7 < 5))
+print((8 > 3) | (7 < 5))
