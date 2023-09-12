@@ -1,0 +1,14 @@
+'''문자열'''
+
+setence = '나는 소년입니다'
+print(setence)
+
+setence2 = "파이썬은 잼있어요"
+print(setence2)
+
+# 한번에 여러 문자열 출력
+setence3 = """      
+나는 소년이고,
+파이썬은 잼있어요
+""" 
+print(setence3)
