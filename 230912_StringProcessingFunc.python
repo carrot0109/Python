@@ -1,0 +1,24 @@
+'''문자열 처리 함수'''
+
+python = "Python is Amazing"
+print(python.lower())       # lower -> 소문자로
+print(python.upper())       # lower -> 대문자로
+print(python[0].isupper())  # python 의 0번째 위치가 대문자인지 확인함
+print(len(python))          # python 문자열의 전체 길이
+print(python.count("n"))    # count -> 갯수 
+print(python.replace("Python", "Java"))
+# replace -> 문자열 중 Python이라는 문자열을 찾아 Java로 재배치
+
+index = python.index("n")   # 'n' 이 몇번째 순서에 위치해있는지 검색
+print(index)
+index = python.index("n", index + 1)
+# index = 5 였는데 index + 1을 해줌으로써 6번째 위치부터 n의 위치를 다시 찾음
+print(index)                # index = 15
+
+print(python.find("n"))     # index와 유사
+
+# 차이점
+print(python.find("Java"))  # 찾는 것이 없다면 단순히 -1 출력
+print(python.index("Java"))     # find와 다르게 오류 발생
+# 따라서 다음 코드를 실행시킬 수 있는지가 다르게 작용될 수 있음
+
