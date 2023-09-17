@@ -1,0 +1,58 @@
+'''리스트'''
+
+# 지하철 칸별로 10명, 20명, 30명
+subway1 = 10
+subway2 = 20
+subway3 = 30
+
+subway = [10, 20, 30]   # 위 코드를 한번에
+print(subway)
+
+subway = ["유재석", "조세호", "박명수"]
+print(subway)
+
+# 조세호가 타고 있는 위치 확인
+print(subway.index("조세호"))
+
+# 하하가 다음 정류장에서 다음칸에 탐
+subway.append("하하")   # 맨 뒤에 더함
+print(subway)
+
+# 정형돈을 유재석과 조세호 사이에 태움
+subway.insert(1,"정형돈")  
+print(subway)
+
+# 지하철에 있는 사람을 한 명씩 뒤에서 꺼냄
+print(subway.pop())     # 맨 뒤 제거
+print(subway)
+# print(subway.pop())     
+# print(subway)
+# print(subway.pop())     
+# print(subway)
+
+# 같은 이름의 사람이 몇 명 있는지 확인
+subway.append("유재석")
+print(subway)
+print(subway.count("유재석"))
+
+# 정렬
+num_list = [5, 2, 4, 3, 1]
+num_list.sort()         # sort() : 크기 순서대로 정렬
+print(num_list)
+
+# 순서 뒤집기
+num_list.reverse()      # reverse() : 순서 뒤집기
+print(num_list)
+
+# 모두 지우기
+num_list.clear()        # clear() : 모두 제거
+print(num_list)
+
+# 다양한 자료형 함께 사용 가능
+mix_list = ["조세호", 20, True]
+print(mix_list)
+
+# 리스트 확장
+new_list = [40]
+mix_list.extend(new_list)
+print(mix_list)
