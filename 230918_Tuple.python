@@ -1,0 +1,14 @@
+'''튜플'''
+
+menu = ("돈까스", "치즈까스")           # 튜플 : 변경되지 않는 목록 작성 시 사용 / ()사용
+print(menu[0])
+
+# menu.add("생선까스")                  # 변경할 수 없으므로 오류 발생
+
+name = "김종국"
+age = 20
+hobby = "코딩"
+print(name,age,hobby)
+
+(name, age, hobby) = ("김종국", 20, "코딩")     # 위 보다 간편하게 코드 작성 가능
+print(name,age,hobby)                          
