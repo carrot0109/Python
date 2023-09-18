@@ -1,0 +1,38 @@
+'''사전'''
+
+cabinet = {3: "유재석",100: "김태호"}         # 열쇠 : 3 and 100, 값 : 유재석 and 김태호
+print(cabinet[3])
+
+print(cabinet.get(3))                        # 위와 동일하게 값을 불러옴
+# print(cabinet[5])                          # 없는 열쇠 --> 오류 (프로그램이 끝나 hi실행되지 않음)
+print(cabinet.get(5))                        # get 사용시 값이 없어도 none출력 후 hi출력
+print(cabinet.get(5, "사용 가능"))            # none 과 다른값 출력하고 싶을 때
+print("hi")
+
+print(3 in cabinet)                          # 3이란 키가 cabinet에 있는지 판단
+
+cabinet = {"A-3":"유재석"}
+print(cabinet["A-3"])                        # 열쇠는 굳이 정수형이 아니어도 됨
+
+# 새 손님
+print(cabinet)
+cabinet["A-3"] = "김종국"                    # 새로운 손님으로 덮어씌워짐 
+cabinet["c-20"] = "조세호"                   # 새 손님과 새 키 생성 
+print(cabinet)
+
+# 간 손님
+del cabinet["A-3"]                          # del cabinet : 키 삭제
+print(cabinet)
+
+# key 들만 출력
+print(cabinet.keys())                       # keys() : 키들만 출력
+
+# vakue 들만 출력
+print(cabinet.values())                     # values() : 값들만 출력
+
+# key와 value 각각 동시에 출력
+print(cabinet.items())                      # items() : 값과 키 나누어 각각 출력
+
+# cabinet 청소
+cabinet.clear()                             # clear() : 모든 키와 값 삭제
+print(cabinet)
