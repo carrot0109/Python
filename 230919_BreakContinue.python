@@ -1,0 +1,11 @@
+'''continue & break'''
+
+absent = [2,5]      # 결석
+no_book = [7]       # 책을 깜빡함
+for student in range(1, 11):
+    if student in absent:       # student의 값이 absent 범위안에 포함되는지
+        continue                # continue : 밑 코드를 실행하지 않고 뛰어넘어 다음 반복문을 계속 실행 
+    elif student in no_book:
+        print("뭐라고???")
+        break                   # break : continue 와 달리 반복문 자체를 끝내버림
+    print("{0}, 책을 읽어봐".format(student))
