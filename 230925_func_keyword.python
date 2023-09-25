@@ -1,0 +1,6 @@
+def profile(name, age, main_lang):
+    print(name, main_lang, age)
+
+profile(name = "유재석", main_lang = "파이썬", age = 20)
+profile(main_lang="자바", age = 25, name = "김태호")       
+# name, main_lang, age 같은 키워드들로 설정되어있다면 전달할 인자들의 순서가 섞여있어도 무관
