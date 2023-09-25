@@ -1,3 +1,5 @@
+'''지역변수, 전역변수'''
+
 gun = 10
 
 def checkpoint(soldiers):   # 경계 근무
