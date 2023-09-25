@@ -1,0 +1,13 @@
+# def profile(name, age, lang1, lang2, lang3, lang4, lang5):
+#     print("이름 : {0}\t나이 : {1}\t".format(name, age),end = " ")         # end = " " : 줄 바꾸기를 하지 않고 이어서 출력
+#     print(lang1, lang2, lang3, lang4, lang5)
+
+def profile(name, age, *language):                                         # *language : 가변인자 설정 --> 인자 갯수 무관 
+    print("이름 : {0}\t나이 : {1}\t".format(name, age),end = " ")           # end = " " : 줄 바꾸기를 하지 않고 이어서 출력
+    for lang in language:
+        print(lang, end = " ")
+    print()         # 줄바꿈을 위함
+
+profile("유재석", 20,"python","java", "C", "C++", "C#", "kotlin")
+profile("김태호", 25, "Kotlin")              
+# lang1,2,3... 을 설정 시 전달 인자를 하나하나 빈칸("")으로 해야하는 반면에 *language로 인자를 전달 받음으로써 그러지 않아도 됨
