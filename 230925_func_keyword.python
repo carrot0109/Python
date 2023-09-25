@@ -1,3 +1,5 @@
+'''키워드값'''
+
 def profile(name, age, main_lang):
     print(name, main_lang, age)
 
