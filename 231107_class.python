@@ -42,7 +42,7 @@ class Unit:
         print("체력 {0}, 공격력 {1}".format(self.hp,self.damage))
 
 marine1 = Unit("마린",40,5)        # made by class --> "객체" ( ex : marine, tank )
-marine2 = Unit("마린",40,5)
+marine2 = Unit("마린",40,5)        # The factor of init and the factor of the object must be the same except self
 
 tank = Unit("탱크",150,35)
 
