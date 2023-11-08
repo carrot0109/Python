@@ -1,0 +1,41 @@
+'''다중 상속'''
+
+class Unit:     # 부모 클래스
+    def __init__(self,name, hp):   
+        self.name = name
+        self.hp = hp
+
+class AttackUnit(Unit):     # Unit 클래스를 상속받겠다는 의미
+    def __init__(self,name, hp, damage):   
+        self.damage = damage
+        Unit.__init__(self, name, hp)   # Unit을 통해서 이름과 공격력, 체력을 상속받아서 사용
+
+    def attack(self, location):  # second function
+        print("{0} : {1} 방향으로 적군을 공격합니다 [공격력 {2}]".format(self.name, location, self.damage))
+
+    def damaged(self, damage):
+        print("{0} : {1} 데미지를 입었습니다.".format(self.name, damage))
+        self.hp -= damage
+        print("{0} : 현재 체력은 {1} 입니다.".format(self.name, self.hp))
+        if self.hp <= 0:
+            print("{0} : 파괴되었습니다.".format(self.name))
+
+# 드랍쉽 : 공중 유닛, 수송기. 마린 / 파이어뱃 / 탱크 등을 수송. 공격 기능 없음
+
+# 날 수 있는 기능을 가진 클래스
+class Flyable:
+    def __init__(self, flying_speed):
+        self.flying_speed = flying_speed
+
+    def fly(self, name, location):
+        print("{0} : {1} 방향으로 날아갑니다. [속도 {2}]".format(name, location, self.flying_speed))
+
+# 공중 공격 유닛 클래스
+class FlyableAttackUnit(AttackUnit, Flyable):
+    def __init__(self, name, hp, damage, flying_speed):
+        AttackUnit.__init__(self, name, hp, damage)
+        Flyable.__init__(self, flying_speed)
+
+# 발키리 : 공중 공격 유닛, 1번에 14발 미사일 발사. 
+valkyrie = FlyableAttackUnit("발키리", 200,6,5)
+valkyrie.fly(valkyrie.name, "3시")  # 이름이 따로 정해져있지 않으니 valkyrie 의 정의된 이름을 꺼내 사용
