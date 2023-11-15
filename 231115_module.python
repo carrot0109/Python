@@ -1,0 +1,22 @@
+import theater_module
+theater_module.price(3)    
+theater_module.price_morning(4)
+theater_module.price_soldier(5)
+
+import theater_module as mv     # mv로만 theater_module 호출
+mv.price(3)     # 위 코드와 동일
+mv.price_morning(4)
+mv.price_soldier(5)
+
+from theater_module import*
+#from random import*
+price(3)
+price_morning(4)
+price_soldier(5)
+
+from theater_module import price, price_morning # 원하는 함수만 불러올 수 있음
+price_soldier(5)        # 사용 불가
+
+from theater_module import price_soldier as price   # 위 두가지 경우를 합친 경우
+price(5)    # price함수지만 위에서 price_soldier 라고 칭했으므로 실제 price 함수는 아님
+
