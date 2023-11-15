@@ -1,0 +1,25 @@
+'''패키지'''
+
+# 패키지 : 모듈을 모아놓은 집합
+
+import travel.thailand      # import 사용시 맨뒤는 모듈이나 패키지만 가능 (클래스 혹은 함수는 불가능)
+trip_to = travel.thailand.ThailandPackage()
+trip_to.detail()
+
+# from import 구문에서는 가능
+from travel.thailand import ThailandPackage
+trip_to = ThailandPackage()
+trip_to.detail()
+
+from travel import vietnam
+trip_to = vietnam.VietnamPackage()
+trip_to.detail()
+
+############################################################################
+class ThailandPackage:
+    def detail(self):
+        print("[태국 패키지 3박 5일] 방콕, 파타야 여행 (야시장 투어) 50만원")
+############################################################################
+class VietnamPackage:
+    def detail(self):
+        print("[베트남 패키지 3박 5일] 다낭 효도 여행 60만원")
