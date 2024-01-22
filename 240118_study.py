@@ -41,3 +41,7 @@
 # book2.name = "Human2"
 # book2.read_book()
 
+class BookReader:
+  name = str()
+  def read_book(self):
+    print(self.name + ' is reading Book!!!')
